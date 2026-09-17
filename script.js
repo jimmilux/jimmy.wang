@@ -32,7 +32,6 @@ const cases = {
     scope: "Product story, UX/UI, testing",
     role: "Lead Product Designer",
     outcome: "+80% CTA clicks",
-    url: "https://jimmywang.be/project/typus-finance",
   },
   c88: {
     index: "Project 02 — Gaming platform",
@@ -41,12 +40,11 @@ const cases = {
     summary: "C88 expanded from a Vietnam-focused sportsbook into a casino platform for the Philippines. I redesigned the product around slot discovery, localized trust, and higher-converting promotion paths.",
     context: "The existing identity and navigation reflected sports betting, while the new market favored slots and casino content. Large banners and horizontal category browsing also hurt discovery.",
     move: "Repositioned the brand, redesigned navigation and game categorization, reduced promotional clutter, and created a consistent mobile-first platform experience.",
-    evidence: "The redesign increased sign-ups by 80%, click-through rate by 35%, and retention by 26%.",
+    evidence: "The redesigned experience increased sign-ups by 53% and click-through rate by 48%, while improving navigation satisfaction and brand alignment.",
     quote: "The strongest redesigns respond to market behavior, not just interface trends.",
     scope: "Research, product UX/UI, localization",
     role: "Product Designer",
-    outcome: "+80% sign-ups",
-    url: "https://jimmywang.be/project/c88-games",
+    outcome: "+53% sign-ups",
   },
   "slot-games": {
     index: "Project 03 — Game design",
@@ -60,7 +58,6 @@ const cases = {
     scope: "Game UX, UI, motion, SFX",
     role: "Multidisciplinary Product Designer",
     outcome: "End-to-end game design",
-    url: "https://jimmywang.be/project/slot-games",
   },
   "visual-design": {
     index: "Project 04 — Visual design",
@@ -74,7 +71,6 @@ const cases = {
     scope: "Art direction, campaign design, retouching",
     role: "Visual Designer",
     outcome: "Cross-channel campaign system",
-    url: "https://jimmywang.be/project/web-visual-design",
   },
 };
 
@@ -112,12 +108,14 @@ const dialogFields = ["index", "title", "summary", "context", "move", "evidence"
 
 document.querySelectorAll("[data-open-case]").forEach((button) => {
   button.addEventListener("click", () => {
-    const item = cases[button.dataset.openCase];
+    const caseId = button.dataset.openCase;
+    const item = cases[caseId];
     dialogFields.forEach((field) => {
       document.querySelector(`#dialog-${field}`).textContent = item[field];
     });
-    document.querySelector("#dialog-link").href = item.url;
+    document.querySelector("#dialog-body").innerHTML = window.caseStudyContent[caseId].body;
     caseDialog.showModal();
+    caseDialog.scrollTop = 0;
   });
 });
 
