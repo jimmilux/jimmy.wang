@@ -21,56 +21,60 @@ const systemContent = {
 
 const cases = {
   typus: {
-    index: "Case 01 — Business impact",
+    index: "Project 01 — Product design",
     name: "Typus Finance",
-    title: "A conversion problem was really an attention problem.",
-    summary: "The original page contained the right information but gave every message similar weight. We reframed the work around one user decision: why should I trust this product enough to act now?",
-    context: "A Web3 landing page with short sessions, low CTA engagement, and limited brand credibility.",
-    move: "Used heatmap and contrast evidence to simplify the story, elevate trust signals, and connect copy, visual direction, and interaction to one action.",
-    evidence: "Delivered in two weeks. CTA clicks increased by 80% after the redesign.",
-    quote: "Good visual hierarchy is business strategy made visible.",
+    title: "A two-week redesign that drove 80% more CTA clicks.",
+    summary: "The existing landing page was rich in information but failed to guide users toward action. I used attention evidence to turn a dense feature story into a clearer conversion journey.",
+    context: "A Web3 landing page with short sessions, low CTA engagement, an unclear visual hierarchy, and limited brand credibility.",
+    move: "Analyzed heatmaps and contrast, clarified the information hierarchy, elevated trust signals, and connected the CTA language to the rocket concept.",
+    evidence: "Delivered in two weeks. The redesigned landing page increased CTA clicks by 80% and improved engagement.",
+    quote: "Visual hierarchy became the bridge between product value and user action.",
     scope: "Product story, UX/UI, testing",
-    leadership: "Evidence-led direction",
+    role: "Lead Product Designer",
     outcome: "+80% CTA clicks",
-  },
-  "design-ops": {
-    index: "Case 02 — Organization",
-    name: "Global iGaming Design",
-    title: "One standard across many kinds of design work.",
-    summary: "Product UI, game experiences, marketing assets, and outsourced work moved at different speeds. The leadership challenge was not to centralize every decision—it was to create shared expectations.",
-    context: "A distributed team serving platform, game, growth, and operational needs across global markets.",
-    move: "Clarified ownership, introduced repeatable review points, structured shared assets, and coached designers to present rationale instead of waiting for instructions.",
-    evidence: "Led 8+ global designers while coordinating cross-functional partners and external design support.",
-    quote: "Scale begins when quality no longer depends on who happens to be in the room.",
-    scope: "Team, process, quality",
-    leadership: "Operating model",
-    outcome: "8+ designers aligned",
+    url: "https://jimmywang.be/project/typus-finance",
   },
   c88: {
-    index: "Case 03 — Product direction",
+    index: "Project 02 — Gaming platform",
     name: "C88 Games",
-    title: "Modernize the platform without making it unfamiliar.",
-    summary: "Gaming users build strong habits around navigation, promotions, and repeated actions. The redesign balanced a more credible product experience with the familiarity required for high-frequency use.",
-    context: "A comprehensive gaming platform responding to changing expectations in the Philippines market.",
-    move: "Reframed the information architecture, visual hierarchy, and content density as one coherent platform direction rather than a cosmetic reskin.",
-    evidence: "A unified experience direction across navigation, discovery, promotion, and responsive product surfaces.",
-    quote: "Transformation works when the new system respects the behavior that made the old one useful.",
-    scope: "Platform UX/UI",
-    leadership: "Market-led direction",
-    outcome: "Unified platform system",
+    title: "A market shift required more than a visual refresh.",
+    summary: "C88 expanded from a Vietnam-focused sportsbook into a casino platform for the Philippines. I redesigned the product around slot discovery, localized trust, and higher-converting promotion paths.",
+    context: "The existing identity and navigation reflected sports betting, while the new market favored slots and casino content. Large banners and horizontal category browsing also hurt discovery.",
+    move: "Repositioned the brand, redesigned navigation and game categorization, reduced promotional clutter, and created a consistent mobile-first platform experience.",
+    evidence: "The redesign increased sign-ups by 80%, click-through rate by 35%, and retention by 26%.",
+    quote: "The strongest redesigns respond to market behavior, not just interface trends.",
+    scope: "Research, product UX/UI, localization",
+    role: "Product Designer",
+    outcome: "+80% sign-ups",
+    url: "https://jimmywang.be/project/c88-games",
   },
-  "game-design": {
-    index: "Case 04 — Team enablement",
-    name: "Game Design Practice",
-    title: "Move design upstream—from asset delivery to game partnership.",
-    summary: "Strong game UI needs more than polished screens. Designers need to understand the concept, player rhythm, production constraints, and why each interaction earns attention.",
-    context: "Multiple game themes and production needs with quality vulnerable to one-off feedback and subjective review.",
-    move: "Established critique around player experience and decision quality, while making reusable patterns and delivery expectations explicit.",
-    evidence: "A more repeatable practice spanning concepts, UI quality, motion, and production collaboration.",
-    quote: "The best critique improves the work today and the designer’s judgment tomorrow.",
-    scope: "Game UX, critique, delivery",
-    leadership: "Capability building",
-    outcome: "Repeatable quality bar",
+  "slot-games": {
+    index: "Project 03 — Game design",
+    name: "Slot Games",
+    title: "Product design across the complete game experience.",
+    summary: "A collection of themed slot games that expanded my role beyond interface design into game concepts, animation, sound, and the details that shape player rhythm.",
+    context: "The online gaming market needed memorable slot experiences that balanced familiar mechanics, distinctive themes, and consistent usability.",
+    move: "Designed the UI and UX, built visual themes, shaped animation timing, and supported sound effects so every layer reinforced the same gameplay experience.",
+    evidence: "End-to-end ownership across UI, UX, visual, animation, and SFX design from 2014 to 2018.",
+    quote: "In game design, every visual and sound cue is part of the interaction model.",
+    scope: "Game UX, UI, motion, SFX",
+    role: "Multidisciplinary Product Designer",
+    outcome: "End-to-end game design",
+    url: "https://jimmywang.be/project/slot-games",
+  },
+  "visual-design": {
+    index: "Project 04 — Visual design",
+    name: "Visual Design",
+    title: "Campaign craft designed for attention and adaptation.",
+    summary: "A collection of promotional work created for digital campaigns, combining art direction, image retouching, brand consistency, and channel-specific execution.",
+    context: "Campaign assets needed to capture attention quickly while adapting across audiences, placements, languages, and promotional messages.",
+    move: "Built high-impact key visuals and translated them into flexible campaign systems without losing hierarchy, mood, or brand recognition.",
+    evidence: "Visual design and retouching work delivered across multiple promotional campaigns during 2023–2024.",
+    quote: "A campaign system succeeds when every adaptation still feels like the same idea.",
+    scope: "Art direction, campaign design, retouching",
+    role: "Visual Designer",
+    outcome: "Cross-channel campaign system",
+    url: "https://jimmywang.be/project/web-visual-design",
   },
 };
 
@@ -112,6 +116,7 @@ document.querySelectorAll("[data-open-case]").forEach((button) => {
     dialogFields.forEach((field) => {
       document.querySelector(`#dialog-${field}`).textContent = item[field];
     });
+    document.querySelector("#dialog-link").href = item.url;
     caseDialog.showModal();
   });
 });
@@ -157,8 +162,8 @@ compareButton.addEventListener("click", () => {
   const rows = [
     ["Case", a.name, b.name, "case-name"],
     ["Scope", a.scope, b.scope],
-    ["Leadership", a.leadership, b.leadership],
-    ["Outcome", `<strong>${a.outcome}</strong>`, `<strong>${b.outcome}</strong>`],
+    ["Role", a.role, b.role],
+    ["Impact", `<strong>${a.outcome}</strong>`, `<strong>${b.outcome}</strong>`],
   ];
   compareTable.innerHTML = rows.map(([label, left, right, extra = ""]) => `
     <div class="compare-cell label">${label}</div>
