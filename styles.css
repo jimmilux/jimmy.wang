@@ -9,6 +9,7 @@
   --white: #fbfbf6;
   --radius: 20px;
   --serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
+  --headline: "Mozilla Headline", Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -103,6 +104,7 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 0 0 5px rgba(215,255,63,.1);
 }
 h1, h2, h3, p { text-wrap: pretty; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--headline); }
 h1 {
   max-width: 950px;
   margin: 0;
@@ -111,7 +113,7 @@ h1 {
   font-weight: 470;
   letter-spacing: -.065em;
 }
-h1 em { color: var(--acid); font-family: var(--serif); font-weight: 400; }
+h1 em { color: var(--acid); font-family: var(--headline); font-weight: 400; }
 .hero-deck {
   max-width: 720px;
   margin: 38px 0 0;
@@ -243,7 +245,7 @@ h1 em { color: var(--acid); font-family: var(--serif); font-weight: 400; }
 .node-people { left: 16%; bottom: 16%; }
 .system-detail { align-self: center; padding: 70px clamp(30px, 6vw, 96px); }
 .detail-kicker { color: #7d857e; }
-.system-detail h3 { margin: 0; font-family: var(--serif); font-size: clamp(34px, 3vw, 50px); line-height: 1.08; font-weight: 400; }
+.system-detail h3 { margin: 0; font-family: var(--headline); font-size: clamp(34px, 3vw, 50px); line-height: 1.08; font-weight: 400; }
 .system-detail > p:not(.detail-kicker) { margin: 30px 0; color: var(--ink-soft); line-height: 1.7; font-size: 16px; }
 .system-detail ul { margin: 0; padding: 0; list-style: none; }
 .system-detail li { padding: 15px 0; border-top: 1px solid var(--line); font-size: 13px; }
@@ -382,7 +384,7 @@ dialog::backdrop { background:rgba(0,0,0,.7); backdrop-filter:blur(8px); }
 .study-media img,.study-media video { display:block;width:100%;height:auto;border-radius:14px;background:#d9d9d3; }
 .study-media figcaption { margin-top:12px;color:#737b74;font-size:11px;line-height:1.55; }
 .study-section { margin-top:clamp(90px,11vw,150px);padding-top:32px;border-top:1px solid var(--line); }
-.study-section>h3 { max-width:900px;margin:0 0 28px;font-family:var(--serif);font-size:clamp(34px,4vw,58px);line-height:1.06;font-weight:400;letter-spacing:-.025em; }
+.study-section>h3 { max-width:900px;margin:0 0 28px;font-family:var(--headline);font-size:clamp(34px,4vw,58px);line-height:1.06;font-weight:400;letter-spacing:-.025em; }
 .study-section>p:not(.study-eyebrow) { max-width:850px;margin:0 0 28px;color:var(--ink-soft);font-size:17px;line-height:1.72; }
 .study-eyebrow { margin:0 0 40px;color:#6b746c;font-size:10px;letter-spacing:.14em;text-transform:uppercase; }
 .study-subtitle { margin:54px 0 18px;font-size:20px; }
