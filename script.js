@@ -186,21 +186,3 @@ document.addEventListener("keydown", (event) => {
 });
 
 syncCompare();
-
-const leadershipStage = document.querySelector("[data-leadership-stage]");
-const precisePointer = window.matchMedia("(pointer: fine)");
-
-if (leadershipStage && precisePointer.matches) {
-  leadershipStage.addEventListener("pointermove", (event) => {
-    const bounds = leadershipStage.getBoundingClientRect();
-    const x = ((event.clientX - bounds.left) / bounds.width) * 100;
-    const y = ((event.clientY - bounds.top) / bounds.height) * 100;
-    leadershipStage.style.setProperty("--mx", `${x}%`);
-    leadershipStage.style.setProperty("--my", `${y}%`);
-  });
-
-  leadershipStage.addEventListener("pointerleave", () => {
-    leadershipStage.style.setProperty("--mx", "50%");
-    leadershipStage.style.setProperty("--my", "42%");
-  });
-}
