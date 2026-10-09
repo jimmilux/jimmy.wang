@@ -124,13 +124,6 @@ caseDialog.addEventListener("click", (event) => {
   if (event.target === caseDialog) caseDialog.close();
 });
 
-const principlesDialog = document.querySelector("[data-principles-dialog]");
-document.querySelector("[data-open-principles]").addEventListener("click", () => principlesDialog.showModal());
-document.querySelector("[data-close-principles]").addEventListener("click", () => principlesDialog.close());
-principlesDialog.addEventListener("click", (event) => {
-  if (event.target === principlesDialog) principlesDialog.close();
-});
-
 const selected = new Set();
 const compareButton = document.querySelector("[data-open-compare]");
 const compareCount = document.querySelector("[data-compare-count]");
