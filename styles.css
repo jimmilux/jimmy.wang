@@ -113,13 +113,9 @@ h1 em { color: var(--acid); font-family: var(--headline); font-weight: 400; }
 .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
 .statement-visual { display:block; }
 .statement-visual > span { display:block; }
-.statement-visual .statement-lead { display:flex;align-items:baseline;gap:.22em;white-space:nowrap; }
-.action-window { position:relative;display:inline-block;overflow:hidden;color:var(--acid);vertical-align:baseline; }
-.action-measure { display:inline-block;visibility:hidden;white-space:nowrap; }
-.action-item { position:absolute;left:0;top:0;display:block;white-space:nowrap;opacity:0;transform:translateY(.35em);animation:headline-action 9s cubic-bezier(.22,.72,.2,1) infinite; }
-.action-two { animation-delay:3s; }
-.action-three { animation-delay:6s; }
-@keyframes headline-action { 0%,27%{opacity:1;transform:translateY(0)} 33%,100%{opacity:0;transform:translateY(-.35em)} }
+.statement-visual .statement-lead { display:block;white-space:nowrap; }
+.action-text { display:inline-block;width:6.2em;margin-left:.12em;color:var(--acid);white-space:nowrap;vertical-align:baseline;opacity:1;transition:opacity .24s ease; }
+.action-text.is-changing { opacity:0; }
 .hero-deck {
   max-width: 720px;
   margin: 38px 0 0;
@@ -456,7 +452,7 @@ dialog::backdrop { background:rgba(0,0,0,.7); backdrop-filter:blur(8px); }
 
 @media (max-width: 680px) {
   .topbar { height:64px;padding:0 18px;grid-template-columns:1fr 1fr; }.topbar nav{display:none}.contact-link{font-size:0}.contact-link span{font-size:17px;border:1px solid currentColor;border-radius:50%;width:38px;height:38px;display:grid;place-items:center}
-  .hero { padding-top:118px;padding-bottom:20px; }h1{font-size:clamp(44px,12.5vw,72px);line-height:.9}.hero-deck{margin-top:28px;font-size:17px}.hero-actions{align-items:flex-start;flex-direction:column;gap:16px;margin-top:32px}.hero-actions .button{width:100%}
+  .hero { padding-top:118px;padding-bottom:20px; }h1{font-size:clamp(38px,11vw,72px);line-height:.9}.hero-deck{margin-top:28px;font-size:17px}.hero-actions{align-items:flex-start;flex-direction:column;gap:16px;margin-top:32px}.hero-actions .button{width:100%}
   .hero-foot{margin-top:55px;display:block}.hero-foot span{display:none}
   .section-heading{gap:22px}.section-heading h2,.work-footer h2,.dialog-inner h2{font-size:clamp(40px,12vw,58px)}
   .system-layout{margin-top:54px;min-height:0}.system-visual{min-height:480px}.orbit-one{width:330px}.orbit-two{width:470px}.system-core{width:140px}.system-core strong{font-size:21px}.system-node{padding:10px 12px;font-size:12px}.node-direction{left:3%;top:18%}.node-systems{right:1%;top:45%}.node-people{left:7%;bottom:16%}.system-detail{padding-top:54px;padding-bottom:0}
@@ -471,6 +467,5 @@ dialog::backdrop { background:rgba(0,0,0,.7); backdrop-filter:blur(8px); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important; }
-  .action-item { display:none;opacity:1;transform:none; }
-  .action-one { display:block; }
+  .action-text { transition:none; }
 }

@@ -125,6 +125,19 @@ caseDialog.addEventListener("click", (event) => {
 });
 
 const selected = new Set();
+const heroAction = document.querySelector("[data-hero-action]");
+if (heroAction && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const actions = ["set direction", "align teams", "build systems"];
+  let actionIndex = 0;
+  window.setInterval(() => {
+    heroAction.classList.add("is-changing");
+    window.setTimeout(() => {
+      actionIndex = (actionIndex + 1) % actions.length;
+      heroAction.textContent = actions[actionIndex];
+      heroAction.classList.remove("is-changing");
+    }, 240);
+  }, 3000);
+}
 const compareButton = document.querySelector("[data-open-compare]");
 const compareCount = document.querySelector("[data-compare-count]");
 const compareDrawer = document.querySelector("[data-compare-drawer]");
