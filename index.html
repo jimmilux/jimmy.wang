@@ -108,23 +108,10 @@
             <p class="section-index">02 / Evidence</p>
             <h2 id="work-title">Selected work, grounded in real products and outcomes.</h2>
           </div>
-          <p>Explore the original projects from my portfolio. Filter by discipline, then compare two cases by scope, role, and impact.</p>
         </div>
 
-        <div class="filter-bar" aria-label="Filter projects">
-          <div class="filter-list" role="group" aria-label="Case filters">
-            <button class="filter-chip is-active" type="button" data-filter="all">All work <span>04</span></button>
-            <button class="filter-chip" type="button" data-filter="product">Product design</button>
-            <button class="filter-chip" type="button" data-filter="game">Game design</button>
-            <button class="filter-chip" type="button" data-filter="visual">Visual design</button>
-          </div>
-          <button class="compare-button" type="button" data-open-compare disabled>
-            Compare <span data-compare-count>0</span>/2
-          </button>
-        </div>
-
-        <div class="case-grid" data-case-grid>
-          <article class="case-card case-featured" data-category="product" data-case="typus">
+        <div class="case-grid">
+          <article class="case-card case-featured">
             <div class="case-visual case-photo visual-typus">
               <img src="assets/typus-finance.jpg" alt="Typus Finance landing page redesign with a purple rocket visual" loading="lazy" />
               <div class="case-visual-label"><span>Web3 product</span><strong>Typus Finance</strong></div>
@@ -136,12 +123,11 @@
               <div class="case-result"><strong>+80%</strong><span>CTA clicks after redesign</span></div>
               <div class="case-actions">
                 <button class="case-link" type="button" data-open-case="typus">View project details <span>↗</span></button>
-                <label class="compare-toggle"><input type="checkbox" data-compare="typus" /><span>Add to compare</span></label>
               </div>
             </div>
           </article>
 
-          <article class="case-card" data-category="product" data-case="c88">
+          <article class="case-card">
             <div class="case-visual case-photo visual-c88">
               <img src="assets/c88-games.jpg" alt="C88 Games mobile casino platform displayed on two phones" loading="lazy" />
               <div class="case-visual-label"><span>Gaming platform</span><strong>C88 Games</strong></div>
@@ -153,12 +139,11 @@
               <div class="case-result"><strong>+53%</strong><span>sign-up rate · +48% click-through rate</span></div>
               <div class="case-actions">
                 <button class="case-link" type="button" data-open-case="c88">View project details <span>↗</span></button>
-                <label class="compare-toggle"><input type="checkbox" data-compare="c88" /><span>Add to compare</span></label>
               </div>
             </div>
           </article>
 
-          <article class="case-card" data-category="game" data-case="slot-games">
+          <article class="case-card">
             <div class="case-visual case-photo visual-slot">
               <img src="assets/slot-games.jpg" alt="Lucky 777 slot machine game interface" loading="lazy" />
               <div class="case-visual-label"><span>Game experience</span><strong>Slot Games</strong></div>
@@ -170,12 +155,11 @@
               <div class="case-result"><strong>E2E</strong><span>game concept to production experience</span></div>
               <div class="case-actions">
                 <button class="case-link" type="button" data-open-case="slot-games">View project details <span>↗</span></button>
-                <label class="compare-toggle"><input type="checkbox" data-compare="slot-games" /><span>Add to compare</span></label>
               </div>
             </div>
           </article>
 
-          <article class="case-card" data-category="visual" data-case="visual-design">
+          <article class="case-card">
             <div class="case-visual case-photo visual-campaign">
               <img src="assets/visual-design.jpg" alt="Casino campaign billboard with a large 100 percent promotion visual" loading="lazy" />
               <div class="case-visual-label"><span>Brand &amp; campaigns</span><strong>Visual Design</strong></div>
@@ -187,7 +171,6 @@
               <div class="case-result"><strong>360°</strong><span>campaign craft across digital touchpoints</span></div>
               <div class="case-actions">
                 <button class="case-link" type="button" data-open-case="visual-design">View project details <span>↗</span></button>
-                <label class="compare-toggle"><input type="checkbox" data-compare="visual-design" /><span>Add to compare</span></label>
               </div>
             </div>
           </article>
@@ -243,14 +226,6 @@
         <div class="case-study-body" id="dialog-body"></div>
       </div>
     </dialog>
-
-    <div class="compare-drawer" data-compare-drawer aria-hidden="true">
-      <div class="compare-head">
-        <div><p>Project comparison</p><h2>Compare project signals</h2></div>
-        <button type="button" data-close-compare>Close <span>×</span></button>
-      </div>
-      <div class="compare-table" data-compare-table></div>
-    </div>
 
     <script src="case-studies.js"></script>
     <script src="script.js"></script>
